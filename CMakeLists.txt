@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.10)
 
 file(READ "SOPHUS_VERSION" SOPHUS_VERSION)
 project(Sophus VERSION ${SOPHUS_VERSION})
@@ -49,7 +49,7 @@ endif()
 # example defined by a parent project including Sophus via `add_subdirectory`.)
 
 if(NOT TARGET Eigen3::Eigen)
-  find_package(Eigen3 3.4.0 REQUIRED)
+  find_package(Eigen3 REQUIRED)
 endif()
 
 # Define interface library target
